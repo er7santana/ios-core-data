@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		DB24509225503C1100DC9061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24509125503C1100DC9061 /* AppDelegate.swift */; };
 		DB24509425503C1100DC9061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24509325503C1100DC9061 /* SceneDelegate.swift */; };
-		DB24509625503C1100DC9061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24509525503C1100DC9061 /* ViewController.swift */; };
 		DB24509925503C1100DC9061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB24509725503C1100DC9061 /* Main.storyboard */; };
 		DB24509C25503C1100DC9061 /* pw_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB24509A25503C1100DC9061 /* pw_coredata.xcdatamodeld */; };
 		DB24509E25503C1400DC9061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB24509D25503C1400DC9061 /* Assets.xcassets */; };
 		DB2450A125503C1400DC9061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB24509F25503C1400DC9061 /* LaunchScreen.storyboard */; };
+		DB2450B025503EFE00DC9061 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2450AF25503EFE00DC9061 /* ItemsViewController.swift */; };
+		DB2450B325503F2500DC9061 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2450B225503F2500DC9061 /* EditItemViewController.swift */; };
+		DB2450B62550409000DC9061 /* Item+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2450B52550409000DC9061 /* Item+Extensions.swift */; };
+		DB2450B9255041CF00DC9061 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2450B8255041CF00DC9061 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB24508E25503C1100DC9061 /* pw-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pw-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB24509125503C1100DC9061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB24509325503C1100DC9061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB24509525503C1100DC9061 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB24509825503C1100DC9061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB24509B25503C1100DC9061 /* pw_coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pw_coredata.xcdatamodel; sourceTree = "<group>"; };
 		DB24509D25503C1400DC9061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2450A025503C1400DC9061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB2450A225503C1400DC9061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB2450AF25503EFE00DC9061 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		DB2450B225503F2500DC9061 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		DB2450B52550409000DC9061 /* Item+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Extensions.swift"; sourceTree = "<group>"; };
+		DB2450B8255041CF00DC9061 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,51 @@
 		DB24509025503C1100DC9061 /* pw-coredata */ = {
 			isa = PBXGroup;
 			children = (
+				DB2450AB25503C6800DC9061 /* Model */,
+				DB2450AA25503C6300DC9061 /* View */,
+				DB2450A925503C5C00DC9061 /* Controller */,
+				DB2450AC25503C7E00DC9061 /* Storyboards */,
 				DB24509125503C1100DC9061 /* AppDelegate.swift */,
 				DB24509325503C1100DC9061 /* SceneDelegate.swift */,
-				DB24509525503C1100DC9061 /* ViewController.swift */,
-				DB24509725503C1100DC9061 /* Main.storyboard */,
 				DB24509D25503C1400DC9061 /* Assets.xcassets */,
-				DB24509F25503C1400DC9061 /* LaunchScreen.storyboard */,
 				DB2450A225503C1400DC9061 /* Info.plist */,
-				DB24509A25503C1100DC9061 /* pw_coredata.xcdatamodeld */,
 			);
 			path = "pw-coredata";
+			sourceTree = "<group>";
+		};
+		DB2450A925503C5C00DC9061 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB2450AF25503EFE00DC9061 /* ItemsViewController.swift */,
+				DB2450B225503F2500DC9061 /* EditItemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB2450AA25503C6300DC9061 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB2450AB25503C6800DC9061 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB24509A25503C1100DC9061 /* pw_coredata.xcdatamodeld */,
+				DB2450B52550409000DC9061 /* Item+Extensions.swift */,
+				DB2450B8255041CF00DC9061 /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB2450AC25503C7E00DC9061 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DB24509725503C1100DC9061 /* Main.storyboard */,
+				DB24509F25503C1400DC9061 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB24509625503C1100DC9061 /* ViewController.swift in Sources */,
+				DB2450B9255041CF00DC9061 /* DataController.swift in Sources */,
 				DB24509C25503C1100DC9061 /* pw_coredata.xcdatamodeld in Sources */,
+				DB2450B025503EFE00DC9061 /* ItemsViewController.swift in Sources */,
+				DB2450B62550409000DC9061 /* Item+Extensions.swift in Sources */,
+				DB2450B325503F2500DC9061 /* EditItemViewController.swift in Sources */,
 				DB24509225503C1100DC9061 /* AppDelegate.swift in Sources */,
 				DB24509425503C1100DC9061 /* SceneDelegate.swift in Sources */,
 			);
